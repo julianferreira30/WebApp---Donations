@@ -1,0 +1,205 @@
+:root {
+    --backgorund-color: #f8f9fa;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink-color: #FC2865;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* NAV BAR STUFF */
+
+.navbar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    background: white;
+    border: .2em solid var(--black-color);
+    border-radius: .25em;
+    margin: 1em 1em 2em 1em;
+    box-shadow: .3em .3em 0px 0px black;
+    position: fixed; /* Fija la nav-bar en la parte superior */
+    top: 0; /* La posiciona al inicio de la p├ígina */
+    left: 0; /* La alinea a la izquierda */
+    width: 100%; /* Abarca todo el ancho de la p├ígina */
+    z-index: 1000;
+    margin-top: 1px;
+}
+
+.navbar > * {
+    color: var(--black-color);
+    font-family: "Roboto", sans-serif;
+}
+
+#logo-id {
+    margin: 0 auto;
+    width: 2%;
+    padding: .5em;
+    border: .2em solid var(--black-color);
+    margin: .1em .25em .1em 1.5em;
+    box-shadow: .15em .15em 0px 0px black;
+    border-radius: .25em;
+}
+
+.navbar h1 {
+    font-family: "Fira Code", monospace;
+    margin: .5em;
+    margin-right: auto;
+}
+
+.navbar a {
+    position: relative;
+    text-decoration: none;
+    margin: 0 2em;
+    padding: .25em;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#logout-btn {
+    background-color: var(--pink-color);
+    width: 5%;
+    text-align: center;
+    padding: .5em;
+    border: .2em solid var(--black-color);
+    box-shadow: .175em .175em 0px 0px black;
+    border-radius: .3em;
+    font-family: "Fira Code", monospace;
+}
+
+#logout-btn:hover {
+    background-color: #fb5685;
+    color: white;
+    transition: 0.2s ease;
+}
+
+
+.navbar-page::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.175em;
+    background: var(--black-color);
+    left: 0;
+    bottom: 0;
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+}
+
+
+.navbar-page:hover::after {
+    transform: scale(1, 1);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.main-container {
+    background-color: #fff;
+    padding: 20px;
+    padding-top: 80px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /*max-width: 400px;*/
+    /*box-sizing: border-box;*/
+    width: 100%;
+    max-width: 100%;
+    align-content: center;
+    font-family: "Fira Code", monospace;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Fira Code", monospace;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 20px; 
+    table-layout: fixed;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Fira Code", monospace;
+}
+th {
+    background-color: var(--pink-color);
+}
+
+#tablaDispositivos tbody tr {
+    cursor: pointer;
+}
+
+/* Opcional: Cambia el color de fondo al pasar el mouse para dar una mejor indicaci├│n visual */
+#tablaDispositivos tbody tr:hover {
+    background-color: #ffd3f8; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.img120 {
+    width: 120px;
+    height: 120px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-start; /* Alinea los botones a la izquierda */
+    align-items: center;
+    margin-top: 20px; /* Espacio entre la tabla y los botones */
+    width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho */
+}
+
+.pagination a {
+    margin-left: 5px; /* Espaciado entre los botones */
+    padding: 8px 16px;
+    background-color: var(--pink-color);
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+    border: .2em solid var(--black-color);
+    box-shadow: .175em .175em 0px 0px black;
+    font-family: "Fira Code", monospace;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.pagination a:hover {
+    background-color: #fb5685;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.pagination span {
+    margin: 0 10px;
+    font-family: "Fira Code", monospace;
+}
+
